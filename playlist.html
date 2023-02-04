@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+   xml:lang="es" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Aplicacion musical tipo Spotify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Jennifer Sanchez"/>
+    <meta name="keywords" content="musica, aplicacion, web, canciones, cantantes"/>
+    <meta name="description" content="Aplicación donde se puede escuchar música, crear listas y compartirlas"/>
+    <!-- Tipografias -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+  <!-- Mis estilos CSS -->       
+		<link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)"/>
+		<link href="css/tablet.css" rel="stylesheet" media="all and (min-width: 601px) and (max-width: 1199px)"/>
+		<link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 1200px)"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body> 
+    <div id="main">
+      <!-- SIDEBAR -->
+     <div id="nav">
+      <div>
+        <img class="logotipo" src="img/logotipo.png" alt="Logotipo aplicacion" />
+      </div>
+     
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="./index.html"><img src="img/casa.png" class="icono" alt="icono inicio" />Home</a>
+          </li>
+          <li>
+            <a href="./search.html"><img src="img/lupa.png" class="icono" alt="icono buscador" />Search</a
+            >
+          </li>
+          <li>
+            <a href="./library.html"><img src="img/libro.png" class="icono" alt="icono libreria" />Your Library</a>
+          </li>
+        </ul>
+        <p id="play">PLAYLISTS</p>
+          <!-- VENTANA FLOTANTE -->
+          <div class="opcion">
+            <a href="#IrVentanaFlotante" class="sidebar-mas">
+              <img class="icono_playlist" src="img/mas.png" title="icono seccion crear playlist"
+                alt="icono seccion crear playlist" />Create Playlist
+            </a>
+          </div>
+        </div>
+        <div id="IrVentanaFlotante" class="modal">
+          <div class="ventana">
+            <a href="#"> X </a>
+            <div>
+              <h2 class="hijo">Create Playlist</h2>
+            </div>
+            <div class="datos-ventana">
+              <div>
+                <img class="icono_playlist2" src="img/subeimagen.jpg" alt="imagen para subir imagenes" />
+              </div>
+              <div id="info-play">
+                <label for="name">Name</label>
+                <input class="input-play" type="text" id="name" name="name" placeholder="My playlist #54" />
+                <label id="descri" for="name">Description</label>
+                <input class="input-play2" type="text" id="create" name="create"
+                  placeholder="Give your playlist a catchy description." />
+                <button class="boton-play" type="button">CREATE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- FIN MENU HAMBURGUESA-->
+<div class="menu">
+        <ul>
+          <li class="li_fondo" >
+            <a href=""><img src="img/corazon.png" class="icono" alt="icono inicio" />Liked Songs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu2">
+        <ul class="menu-lista">
+          <li><a href="./playlist.html">Starred</a></li>
+          <li><a href="./playlist.html">Regina Spektor</a></li>
+          <li><a href="./playlist.html">Phoenix</a></li>
+          <li><a href="./playlist.html">Frank Sinatra</a></li>
+          <li><a href="./playlist.html">Bob Marley</a></li>
+          <li><a href="./playlist.html">Pearl Jam</a></li>
+          <li><a href="./playlist.html">Variadissimo</a></li>
+          <li><a href="./playlist.html">La Movida Madrileña 80-90</a></li>
+          <li><a href="./playlist.html">Starred</a></li>
+          <li><a href="./playlist.html">Regina Spektor</a></li>
+          <li><a href="./playlist.html">Phoenix</a></li>
+        </ul>
+      </div>
+      <div class="install">
+        <a href="" onclick="target='_blank';"><img src="img/install.png" alt="icono para descargar app" /></a>
+        <a href="" onclick="target='_blank';">Install app</a>
+      </div>      
+<!-- Menu horizontal -->
+      <div id="nav2">
+        <div class="flechas">
+          <a href=""><img src="img/flechaizq.png" alt="flecha izquierda" /></a>
+          <a href=""><img src="img/flechader.png" alt="flecha derecha" /></a>
+        </div>
+               <div class="registro">
+          <button class="boton-registro">UPGRADE</button>
+          <button class="boton-usuario">
+            <img src="img/usuario.png" alt="boton iniciar sesion" />
+          </button>
+        </div>
+      </div>
+    </div>
+       <!-- MENU HAMBURGUESA -->
+       <div id="contenedor_hamburguesa">
+        <button class="botonMenu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div id="principal">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./search.html">Search</a></li>
+            <li><a href="./library.html">Your Library</a></li>
+            <li><a href="">Liked Songs</a></li>
+          </ul>
+          <div class="opcion">
+            <a href="#IrVentanaFlotante" class="sidebar-mas">Create Playlist</a>
+          </div>
+        </div>
+      </div>
+      <!-- SECCIÓN MUSICAL -->
+      <div id="section">
+            <!-- Cabecera canción -->
+            <div class="cabecera_cancion">
+             <div>
+              <img class="album-playlist" src="img/pearl1.webp" alt="imagen de portada del album en reproduccion" />
+             </div>
+             <div class="info_cancion_playlist">
+              <p id="titulo_play">PLAYLIST</p>
+              <h1 class="titulo_playlist">This Is Maribou State</h1>
+              <p id="info_play">This Is Maribou State. The essential tracks, all in one playlist.</p>
+              <p id="info_play2">Spotify · 14,861 likes · 41 songs, 2 h 59 min</p>
+             </div>
+            </div>
+            <!-- Menu iconos -->
+            <div class="iconos_principales_playlist">
+              <a href=""><img class="iconos_playlist" src="img/play.png" alt="icono corazon" /></a>
+              <a href=""><img class="iconos_playlist" src="img/fav.png" alt="icono favoritos" /></a>
+              <a href=""><img class="iconos_playlist" src="img/puntitos.png" alt="icono puntitos" /></a>
+            </div>
+            <!--Lista de reproduccion -->
+            <div class="playlist">
+              <ul class="lista_playlist">
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+                <!--cancion-->
+                <li>
+                  <div>
+                    <img class="icono_nota" src="img/nota.png" alt="icono nota musical" />
+                  </div>
+                  <div class="info_cancion">
+                    <a href="">Midas</a>
+                    <p>Maribou State, Holly Walker · Portraits</p>
+                  </div>
+                  <div>
+                    <p>3:38</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      <!-- FÍN SECCIÓN MUSICAL -->
+      <!-- REPRODUCTOR -->
+      <div class="reproductor">
+        <div class="porta">
+          <img src="img/pearl1.webp" alt="imagen de portada del album de reproduccion" />
+        </div>    
+          <div class="info-cancion">
+            <p class="titulo">The Bones - with Hozier</p>
+            <p class="cancion">Maren Morris, Hozier</p>
+        </div>     
+        <div>     
+          <a href=""><img src="img/fav.png" class="icono-fav" alt="icono favoritos" /></a>
+        </div>
+        <div class="repro">
+          <audio src="music/jeremy.mp3" controls="controls" preload="none"></audio>
+        </div>        
+      </div>
+    </div>
+  </body>
+</html>
