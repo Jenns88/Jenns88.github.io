@@ -1,0 +1,761 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.0/css/font-awesome.css";
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: white;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #919191;
+}
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 18px;
+  color: #919191;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+li {
+  list-style: none;
+  color: #919191;
+  font-size: 0.9em;
+}
+a {
+  color:#919191 ;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+a:hover {
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  top: 0;
+  bottom: 0;
+}
+
+#main {
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+
+/* SIDEBAR */
+#nav {
+  background-color: black;
+  width: 274px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+}
+
+.menu2 {
+  height: 260px;
+  overflow: auto;
+  width: 90%;
+  max-width: 400px;
+  /*Estilos estándar experimentales (Principalmente Firefox)*/
+  scrollbar-color: #919191;
+  scrollbar-width: thin;
+}
+nav a {
+  color: #919191;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.menu {
+  width: 300px;
+  margin-left: -34px;
+}
+.menu li {
+  height: 37px;
+  display: flex;
+}
+.menu li a {
+  margin-left: 13%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-lista li {
+  list-style-type: none;
+  margin-bottom: 5%;
+}
+
+.menu li:hover {
+  background: #282828;
+  width: 100%;
+  margin: 0;
+}
+.li_fondo{
+  background: #282828;
+  width: 100%;
+  margin: 0;
+}
+
+.logotipo {
+  width: 130px;
+  margin: 20px 0 0 30px;
+}
+#play {
+  margin-left: 25%;
+  margin-bottom: 5%;
+  letter-spacing: 2px;
+}
+
+.install {
+  height: 30px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+}
+.install img {
+  width: 20px;
+  height: 20px;
+  margin-left: 39px;
+}
+.install a {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* MENÚ HORIZONTAL */
+#nav2 {
+  background-color: #08080800;
+  width: 82%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  margin-left: 274px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flechas {
+  width:96px;
+  margin-left: 20px;
+}
+#nav2 img {
+  width: 20px;
+  margin-right: 20px;
+}
+.registro {
+  width: 180px;
+  display: flex;
+}
+.boton-registro {
+  width: 125px;
+  background-color: #ffffff00;
+  color: white;
+  border: 1px solid white;
+  padding: 5%;
+  /* cursor: default; */
+  font: inherit;
+  overflow: visible;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin-left: -5%;
+}
+.boton-usuario {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  margin-left: 6%;
+}
+.up {
+  border-radius: 20px;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+input {
+  width: 230px;
+  padding: 10px;
+  border-radius: 30px;
+  border-style: inherit;
+}
+
+/*Buscador*/
+
+#container {
+  margin-right: auto;
+}
+#searchform {
+  display: inline;
+  font-size: 1em;
+  border-radius: 8em;
+  border: 0.1em solid #dad0be;
+  box-shadow: 0 0 0.3em rgba(60,60,60,0.4);
+  padding: 0.3em;
+  background: white;
+}
+#s {
+  transition: all 0.2s ease-out;
+  width: 1px;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  opacity: 0;
+}
+#s:focus {
+  width: 8em;
+  opacity: 1;
+}
+label {
+  padding-left: 1px;
+  display: inline-block;
+  margin-top: 0.3em;
+  color: #dad0be;
+  text-shadow: 0 0 0.1em rgba(60,60,60,0.3);
+  position: relative;
+  left: 0.1em;
+}
+
+
+
+/* SECCIÓN PRIMERA ÁLBUMES */
+.caja-album{
+  width: 80%;
+  margin: 3% 0 0 20%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.caja-album2{
+  width: 80%;
+  margin: 3% 0 0 20%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.caja_1{
+  width: 78%;
+margin: 4% 0 0 21%;
+}
+
+.caja_album1{
+  width: 97%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portada {
+  width: 150px;
+  margin-top: 15px;
+}
+.container-album {
+  width: 183px;
+  height: 260px;
+  background-color: #282828;
+  border-radius: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+  width: 150px;
+}
+.seccion-segunda{
+  width: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 270px;
+  margin-top: 340px;
+}
+
+
+/* ASIDE */
+#aside {
+  width: 100%;
+  height: 100px;
+  left: 0px;
+  bottom: 70px;
+  background-color: #181818;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+/* REPRODUCTOR */
+.reproductor {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 70px;
+  width: 100%;
+  background-color: #282828;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+
+.porta {
+  width: 58px;
+  height: 52px;
+  margin-left: 35px;
+  display: flex;
+}
+
+.repro {
+  margin: auto;
+}
+
+.icono {
+  width: 25px;
+  margin-right: 15px;
+}
+.icono-fav {
+  width: 15px;
+  height: 15px;
+  margin: 0 15px 0 10px;
+}
+.info-cancion {
+  margin-left: 10px;
+}
+.titulo {
+  font-weight: 500;
+  color: white;
+}
+.cancion {
+  font-size: 0.7rem;
+  margin-top: -13px;
+}
+
+
+/* PÁGINA SEARCH */
+/* MENU HORIZONTAL */
+.menu-horizontal2 {
+  width: 94%;
+  height: 60px;
+  position: fixed;
+  margin-left: 274px;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* GÉNERO MUSICAL */
+.caja_primera, .caja_segunda {
+  width: 1auto;
+  padding: 2rem;
+  margin:0;                
+  margin-top: 1rem;
+}
+
+.caja_primera{
+  margin: 3% 0 0 19%;
+}
+.caja_segunda{
+  margin: -2% 0 0 19%;
+}
+.genero {
+  width: 360px;
+}
+
+.search2, .search3{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+}
+#buscador {
+  margin-right: 50%;
+}
+.iconolupa {
+  background-image: url("img/buscador.png");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  padding-left: 28px;
+  height: 38px;
+  position: absolute;
+  margin-left: 0.7%;
+  z-index: 3;
+}
+
+.boton-usuario2 {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  margin-left: 70%;
+}
+.icono-placeholder {
+  width: 300px;
+  position: relative;
+}
+
+#section3,
+#section4 {
+  width: 90%;
+  height: 270px;
+}
+#section3 {
+  margin: 90px 0 0 310px;
+}
+#section4 {
+  margin: 5px 0 0 310px;
+
+}
+.cabecera2 {
+  width: 80%;
+  height: 30px;
+}
+.genero2 {
+  width: 180px;
+  height: 180px;
+  margin-right: 14px;
+}
+.search2,.search3 {
+  
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container-album2 {
+  margin-right: 10px;
+}
+
+/* PÁGINA LIBRARY */
+#seccion_library{
+  width: 80%;
+  height: 100vh;
+  margin-left: 17%;
+}
+.albumes_primera {
+  margin-top: 25px;
+}
+.albumes_segunda {
+  margin-top: 330px;
+}
+
+.albuml {
+  width: 95%;
+  height: 259px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 30px 30px 45px;
+}
+
+.portadal {
+  width: 150px;
+  margin-top: 15px;
+}
+.container-albuml {
+  width: 183px;
+  height: 260px;
+  margin-bottom: 2%;
+  background-color: #282828;
+  border-radius: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.infol {
+  width: 150px;
+}
+
+.play {
+  width: 40px;
+  margin-left: 70%;
+}
+
+.menu-reproduccion {
+  width: 80%;
+  height: 20px;
+  margin-top: 110px;
+  margin-left: 280px;
+  position: relative;
+  z-index: 200;
+}
+.menu-reproduccion a{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+
+.menu-reproduccion ul {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.info_play{
+  width: 150px;
+  margin-bottom: 8%;
+}
+
+#nav3{
+width: auto;
+margin: 5% 0 0 18%;
+}
+.post-title{
+margin-right: 2% ;
+font-weight: 500;
+}
+
+
+/* Efecto subrayado en menú*/
+li.post-title {
+display: inline-block;
+}
+li.post-title:after{
+content: '';
+display: block;
+height: 3px;
+width: 0;
+background: transparent;
+transition: width .5s ease, background-color .5s ease;
+}
+li.post-title:hover:after{
+width: 50%;
+background: #55ba55;
+}
+
+
+/*PLAYLIST */
+.cabecera_cancion {
+  width: 100%;
+  height: 310px;
+  padding-top: 4%;
+  padding-left: 21%;
+  background: linear-gradient( rgb(37, 37, 37), rgb(0, 0, 0)); 
+  display: flex;
+  position: relative;
+}
+.playlist {
+  width: 100%;
+  height: 600px;
+  padding: 4% 0 0 17%;
+  position: absolute;
+}
+.lista_playlist {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+}
+.lista_playlist li{
+  height: 45px;
+  margin: 0 2% 1% 3%;
+  display: flex;
+   justify-content: space-between;
+}
+.info_cancion{
+  margin-right: 75%;
+}
+.info_cancion a{
+  margin-right: 75%;
+  color:white;
+} 
+.info_cancion a:active{
+  color:#55ba55;
+} 
+.info_cancion p{
+  margin:0 auto;
+}
+.playlist ul {
+  display: flex;
+}
+.album-playlist {
+  width: 200px;
+}
+.info_cancion_playlist {
+  margin-left: 30px;
+}
+.titulo_playlist {
+  font-size: 4.2rem;
+  margin-top: -9px;
+}
+#titulo_play {
+  color: white;
+  margin-top: 35px;
+}
+#info_play {
+  margin-top: -35px;
+}
+#info_play2 {
+  margin-top: -10px;
+}
+.icono_nota{
+  width: 13px;
+}
+.iconos_principales_playlist{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top:47%;  
+  padding-left: 18%;
+}
+.iconos_playlist {
+  width: 24px;
+  margin-right: 1%;
+}
+.iconos_principales_playlist a:first-child:first-child {
+  margin-left: 4%;
+}
+/*VENTANA FLOTANTE */
+.icono_playlist {
+  width: 24px;
+  margin-left: 25%;
+  margin-right: 5%;
+}
+.icono_playlist2 {
+  width: 170px;
+}
+
+.sidebar-mas {
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+}
+.opcion {
+  margin-bottom: -5%;
+}
+.opcion a {
+  height: 37px;
+  font-size: 0.9em;
+}
+.opcion a:hover {
+  background: #282828;
+  width: 100%;
+  margin: 0;
+}
+#info-play {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+#info-play label {
+  color: #919191;
+  font-size: 0.7em;
+}
+#descri {
+  margin-top: 8%;
+}
+input::placeholder {
+  color: #919191;
+  font-size: 0.8em;
+}
+
+.ventana {
+  background-color: #282828;
+  width: 600px;
+  height: 300px;
+  padding: 10px 20px;
+  margin: 7% auto;
+  border-radius: 10px;
+  position: relative;
+}
+.ventana a {
+  margin-left: 98%;
+}
+.hijo {
+  margin-left: 40%;
+  font-size: 1em;
+}
+.datos-ventana {
+  display: flex;
+  margin-top: 4%;
+}
+.input-play {
+  border-radius: 5px;
+  height: 25px;
+  width: 200%;
+  margin-top: 3%;
+}
+.input-play2 {
+  border-radius: 5px;
+  height: 98px;
+  width: 200%;
+  margin-top: 3%;
+}
+.boton-play {
+  width: 125px;
+  background-color: #55ba55;
+  color: white;
+  padding: 6%;
+  border: 0;
+  /* cursor: default; */
+  font: inherit;
+  overflow: visible;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin: 12% 0 0 10%;
+}
+.modal {
+  position: fixed;
+  background-color: #0000009c;
+  width: 100%;
+  height: auto;
+  top: -250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+  z-index: 2;
+}
+#IrVentanaFlotante:target {
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 250px;
+}
+
+/* MENÚ HAMBURGUESA */
+#contenedor_hamburguesa{
+  display: none;
+}
